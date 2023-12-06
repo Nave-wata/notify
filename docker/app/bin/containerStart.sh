@@ -31,4 +31,11 @@ screen -S vite -X stuff ' \
     npm run dev
 '
 
+screen -dmS queue
+
+screen -S queue -X stuff ' \
+    cd /var/www/html
+    php artisan queue:listen --queue=emails,default
+'
+
 /usr/local/bin/docker-php-entrypoint php-fpm

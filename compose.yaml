@@ -16,7 +16,7 @@ services:
     tty: true
 
   app:
-    image: nave3/notify:app-1.0.0
+    image: nave3/notify:app-1.1.0
     container_name: laravel_app
     build:
       context: .

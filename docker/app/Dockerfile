@@ -46,7 +46,7 @@ RUN \
     echo "dev ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # composer, node のコピー
-COPY --from=node:20.9.0-slim /usr/local /usr/local
+COPY --from=node:16.20.2-slim /usr/local /usr/local
 COPY --from=composer:2.6.5 /usr/bin/composer /usr/bin/composer
 
 # 設定ファイルをコピー

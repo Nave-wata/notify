@@ -2,8 +2,8 @@ version: "3"
 
 services:
   nginx:
-    image: laravel:nginx-1.0.0
-    container_name: laravel_nginx
+    image: nave3/notify:nginx-1.0.0
+    container_name: notify_nginx
     build:
       context: .
       dockerfile: ./docker/nginx/Dockerfile
@@ -16,7 +16,7 @@ services:
     tty: true
 
   app:
-    image: laravel:app-1.0.0
+    image: nave3/notify:app-1.1.0
     container_name: laravel_app
     build:
       context: .
@@ -30,8 +30,8 @@ services:
     tty: true
 
   db:
-    image: laravel:db-1.0.0
-    container_name: laravel_db
+    image: nave3/notify:db-1.0.0
+    container_name: notify_db
     build:
       context: .
       dockerfile: ./docker/db/Dockerfile
@@ -43,8 +43,8 @@ services:
     tty: true
 
   phpmyadmin:
-    image: laravel:phpmyadmin-1.0.0
-    container_name: laravel_phpmyadmin
+    image: nave3/notify:phpmyadmin-1.0.0
+    container_name: notify_phpmyadmin
     build:
       context: .
       dockerfile: ./docker/phpmyadmin/Dockerfile
@@ -62,8 +62,8 @@ services:
     tty: true
 
   redis:
-    image: laravel:1.0.0
-    container_name: laravel_redis
+    image: nave3/notify:redis-1.0.0
+    container_name: notify_redis
     build:
       context: .
       dockerfile: ./docker/redis/Dockerfile

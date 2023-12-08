@@ -106,4 +106,11 @@ return [
         'table' => 'failed_jobs',
     ],
 
+    /*
+     * キュー名
+     */
+    'name' => [
+        'emails' => 'emails',
+        'default' => 'default',
+    ],
 ];
